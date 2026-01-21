@@ -225,7 +225,7 @@ export default function Invite() {
             <PanelText>
               The Sefah and Lamptey family request the pleasure of your company
               as we celebrate tradition, family, and the start of a new journey.
-              Consider this your official clearance to join us for a morning of
+              Consider this your official clearance to join us for a evening of
               love, laughter, and blessing.
             </PanelText>
 
@@ -262,48 +262,92 @@ export default function Invite() {
           />
 
           <Panel>
-            <PanelTitle>FLIGHT DETAILS</PanelTitle>
+  <PanelTitle>FLIGHT DETAILS</PanelTitle>
 
-            <div className="mt-6 space-y-4">
-              {DETAILS.map((d) => (
-                <div
-                  key={d.label}
-                  className="
-        grid grid-cols-[26px_90px_1fr]
-        gap-4
-        items-start
-        rounded-lg
-        px-1
-        py-1
-        transition
-        hover:bg-[#e6d19e]/25
-      "
-                >
-                  <div className="mt-[2px] text-[#3378b9]">{d.icon}</div>
+  <div className="mt-6 space-y-4">
+    {DETAILS.map((d) => (
+      <div
+        key={d.label}
+        className="
+          grid grid-cols-[26px_90px_1fr]
+          gap-4
+          items-start
+          rounded-lg
+          px-1
+          py-1
+          transition
+          hover:bg-[#e6d19e]/25
+        "
+      >
+        <div className="mt-[2px] text-[#3378b9]">{d.icon}</div>
 
-                  <div className="text-xs tracking-[0.25em] text-[#3d3d3d]">
-                    {d.label}
-                  </div>
+        <div className="text-xs tracking-[0.25em] text-[#3d3d3d]">
+          {d.label}
+        </div>
 
-                  <div className="text-sm text-[#181818]">{d.value}</div>
-                </div>
-              ))}
+        <div className="text-sm text-[#181818]">{d.value}</div>
+      </div>
+    ))}
+  </div>
+
+  {/* Dress Guidance */}
+  <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-5">
+    <p className="text-xs tracking-[0.30em] uppercase text-black">
+      Dress Guidance
+    </p>
+    <p className="mt-2 text-sm text-gray-800 leading-relaxed">
+      White. Think clean, timeless, elegant. Keep it comfortable for a morning
+      celebration.
+    </p>
+  </div>
+
+  {/* Color Palette */}
+  <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-5">
+    <p className="text-xs tracking-[0.30em] uppercase text-black">
+      Color Palette
+    </p>
+
+    <div className="mt-4 grid grid-cols-3 gap-3">
+      {[
+        { hex: "#0B090C", name: "Jet" },
+        { hex: "#A5907B", name: "Taupe" },
+        { hex: "#50311D", name: "Espresso" },
+        { hex: "#D4CABE", name: "Sand" },
+        { hex: "#806248", name: "Cocoa" },
+        { hex: "#FFFFFF", name: "White" }, // added
+      ].map((c) => (
+        <div key={c.hex} className="flex items-center gap-3 rounded-lg p-2">
+          <span
+            className="h-9 w-9 rounded-full border"
+            style={{
+              backgroundColor: c.hex,
+              borderColor: c.hex === "#FFFFFF" ? "rgba(0,0,0,0.15)" : "rgba(255,255,255,0.25)",
+            }}
+            aria-label={`${c.name} ${c.hex}`}
+            title={`${c.name} ${c.hex}`}
+          />
+          <div className="leading-tight">
+            <div className="text-[11px] font-medium text-[#181818]">
+              {c.name}
             </div>
-
-            <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-5">
-              <p className="text-xs tracking-[0.30em] uppercase text-black">
-                Dress Guidance
-              </p>
-              <p className="mt-2 text-sm text-gray-800 leading-relaxed">
-                White. Think clean, timeless, elegant. Keep it comfortable for a
-                morning celebration.
-              </p>
+            <div className="text-[10px] tracking-[0.18em] text-gray-600">
+              {c.hex}
             </div>
+          </div>
+        </div>
+      ))}
+    </div>
 
-            <div className="mt-8 text-xs text-gray-500">
-              Kindly note: this event is strictly by invitation.
-            </div>
-          </Panel>
+    <p className="mt-4 text-xs text-gray-600">
+      White is the primary dress color; the palette above reflects the event
+      tone and styling accents.
+    </p>
+  </div>
+
+  <div className="mt-8 text-xs text-gray-500">
+    Kindly note: this event is strictly by invitation.
+  </div>
+</Panel>
 
           <MosaicImage
             className="md:block hidden"
@@ -348,12 +392,12 @@ export default function Invite() {
 
           <Panel>
             <PanelTitle>ARRIVAL & ROUTE</PanelTitle>
-            <PanelText>
-             Please arrive early so you don&APOS;t miss the welcome moment and seating.
-If you
-              need help with directions, reach out to the family contact listed
-              on your invite.
-            </PanelText>
+          <PanelText>
+  Please arrive early to avoid missing the welcoming moment and seating. Should
+  you require assistance with directions, kindly contact the family representative
+  listed on your invitation.
+</PanelText>
+
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               {/* Primary */}
@@ -574,7 +618,7 @@ If you
 
 
       <footer className="py-10 text-center text-xs text-black/50">
-        Passport to Engagement • Accra
+        Passport to Dinner • Accra
       </footer>
     </main>
   );

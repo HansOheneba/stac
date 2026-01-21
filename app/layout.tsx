@@ -14,30 +14,34 @@ const raleway = Raleway({
   display: "swap",
 });
 
-const SITE_NAME = "Passport to Engagement";
+const SITE_NAME = "Passport to Dinner";
 const COUPLE = "FG OFFR RO Sefah & FG OFFR TB Lamptey";
 const DESCRIPTION =
-  "Your official passport to our engagement — flight details, venue, and all the moments that matter.";
+  "Your official passport to our dinner — event details, venue, and all the moments that matter.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"), // <-- replace with your real domain later
+  metadataBase: new URL("https://example.com"), // replace with real domain later
+
   title: {
     default: `${SITE_NAME} • ${COUPLE}`,
     template: `%s • ${SITE_NAME}`,
   },
+
   description: DESCRIPTION,
   applicationName: SITE_NAME,
-  category: "wedding",
+  category: "private event",
+
   keywords: [
-    "wedding",
-    "engagement",
-    "invitation",
-    "passport invite",
+    "dinner invitation",
+    "private dinner",
+    "passport invitation",
+    "formal dinner",
+    "event invitation",
     "Accra",
-    "traditional marriage",
     "flight theme",
-    "airline theme",
+    "passport theme",
   ],
+
   authors: [{ name: COUPLE }],
   creator: COUPLE,
 
@@ -46,9 +50,15 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} • ${COUPLE}`,
     description: DESCRIPTION,
-    locale: "en_GB",
-    // Put an image in /public/og.jpg (1200x630) when you're ready
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: SITE_NAME }],
+    locale: "en_GH",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      },
+    ],
   },
 
   twitter: {
@@ -75,8 +85,7 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Nice small touch: discourages indexing if you want it private.
-  // If you want Google to index it, delete this entire "robots" block.
+  // Keep private unless you explicitly want indexing
   robots: {
     index: false,
     follow: false,
@@ -102,13 +111,12 @@ export default function RootLayout({
           playfair.variable,
           raleway.variable,
           "antialiased",
-          // default font stack: body uses raleway, headings can use playfair via classes
           "font-sans",
           "bg-[#0b0b0c]",
           "text-white",
         ].join(" ")}
       >
-        {/* Subtle “flight / passport” ambient layer. Keep it very light */}
+        {/* Subtle passport / flight ambient layer */}
         <div
           aria-hidden
           className="fixed inset-0 -z-10 opacity-[0.10]"

@@ -270,7 +270,7 @@ export default function PassportGate({
                 >
                   {/* ================= FRONT FACE (cover) ================= */}
                   <div
-                    className="absolute inset-0 bg-[#3378b8] border border-white/10"
+                    className="absolute inset-0 bg-[#255683] border border-white/10"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
