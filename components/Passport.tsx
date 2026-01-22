@@ -399,7 +399,7 @@ export default function PassportGate({
                             repeat: Infinity,
                             ease: "easeInOut",
                           }}
-                          className=" text-[#fff9df]  mt-2 text-xs"
+                          className=" text-[#fff9df]  mt-1 text-md"
                         >
                           Tap to open invite
                         </motion.p>
