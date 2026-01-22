@@ -296,7 +296,7 @@ export default function Invite() {
       Dress Guidance
     </p>
     <p className="mt-2 text-sm text-gray-800 leading-relaxed">
-      White. Think clean, timeless, elegant. Keep it comfortable for a morning
+      Think clean, timeless, elegant. Keep it comfortable for a evening
       celebration.
     </p>
   </div>
@@ -338,10 +338,7 @@ export default function Invite() {
       ))}
     </div>
 
-    <p className="mt-4 text-xs text-gray-600">
-      White is the primary dress color; the palette above reflects the event
-      tone and styling accents.
-    </p>
+   
   </div>
 
   <div className="mt-8 text-xs text-gray-500">
