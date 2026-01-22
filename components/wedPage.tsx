@@ -225,7 +225,7 @@ export default function Invite() {
             <PanelText>
               The Sefah and Lamptey family request the pleasure of your company
               as we celebrate tradition, family, and the start of a new journey.
-              Consider this your official clearance to join us for a evening of
+              Consider this your official clearance to join us for an evening of
               love, laughter, and blessing.
             </PanelText>
 
