@@ -607,7 +607,7 @@ export default function Invite() {
     <RSVPSection
   eventTag="R&B26"
   contacts={[
-    { name: "FG OFFR GF ADADE", phone: "+233 50 269 8506" },
+    { name: "FG OFFR GF ADADE", phone: "+233 54 245 4038" },
     { name: "STACEY ELSIE LAMPTEY", phone: "+233 56 060 7547" },
     { name: "ERNESANG EVENTS", phone: "+233 50 473 6192" },
   ]}
