@@ -782,7 +782,7 @@ function RSVPCard({
   const phoneDigits = contact.phone.replace(/\D/g, "");
   const intl = `${phoneDigits.replace(/^0/, "")}`; // Ghana
   const message = encodeURIComponent(
-    `Hello ${contact.name}, I’m confirming my attendance for the engagement (${eventTag}). My name is: ______. ✅`
+    `Hello ${contact.name}, I’m confirming my attendance for the Dinner (${eventTag}). My name is ... `
   );
 
   const waLink = `https://wa.me/${intl}?text=${message}`;
