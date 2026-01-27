@@ -338,7 +338,7 @@ export default function PassportGate({
 
                       {/* Bottom copy (matches screenshot layout) */}
                       <div className="mt-auto w-full pb-3">
-                        <p
+                        {/* <p
                           className="
           uppercase
           text-xs
@@ -349,8 +349,8 @@ export default function PassportGate({
           opacity-90
         "
                         >
-                          TO THE MARRIAGE CEREMONY OF
-                        </p>
+                          TO THE DINNER OF
+                        </p> */}
 
                         <p
                           className="
