@@ -566,18 +566,13 @@ export default function Invite() {
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              <GiftCard
-                title="Mobile Money"
-                name="Richard Obeng Sefah"
-                value="0549422645"
-                meta="MTN MoMo"
-              />
+        
 
               <GiftCard
                 title="Bank Transfer"
                 name="Tracey Babsy Lamptey"
-                value="1441004879779"
-                meta="EcoBank"
+                value="2071115691590"
+                meta="GT Bank"
               />
             </div>
           </div>
